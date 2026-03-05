@@ -5,6 +5,7 @@ alias bup='brew update && brew upgrade && brew cleanup'
 alias buin='brew uninstall'
 
 # GIT ALIASES -----------------------------------------------------------------
+alias gs='git status'
 alias gco='git checkout'
 alias gcob='git checkout -b'
 alias gdev='git checkout dev'
@@ -32,5 +33,5 @@ alias gcp='git cherry-pick'
 alias git-current-branch="git branch | grep \* | cut -d ' ' -f2"
 alias grc='git rebase --continue'
 alias gra='git rebase --abort'
-alias gec='git status | grep "both modified:" | cut -d ":" -f 2 | trim | xargs nvim -'
+alias gec='git status | grep "both modified:" | cut -d ":" -f 2 | xargs nvim -'
 alias gcan='gc --amend --no-edit'
