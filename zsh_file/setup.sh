@@ -5,20 +5,34 @@
 
 set -e
 
-DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Get the parent directory (dotfiles root)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
+ZSH_DIR="$HOME/zsh"
 ZSHRC="$HOME/.zshrc"
 
-echo "🚀 Setting up configuration..."
-echo "Dotfiles directory: $DOTFILES_DIR"
+echo "🚀 Setting up zsh configuration..."
+echo "New ZSH directory: $ZSH_DIR"
 
+# Create zsh directory if it doesn't exist
+if [ ! -d "$ZSH_DIR" ]; then
+    echo "📁 Creating zsh directory..."
+    mkdir -p "$ZSH_DIR"
+fi
+
+# Copy files to zsh directory
+echo "📋 Copying configuration files..."
+cp "$SCRIPT_DIR/aliases.zsh" "$ZSH_DIR/"
+cp "$SCRIPT_DIR/git.zsh" "$ZSH_DIR/"
 
 # Create or update .zshrc
 echo "✏️  Configuring .zshrc..."
 cat >> "$ZSHRC" << EOF
 
 # Dotfiles configuration
-source "$DOTFILES_DIR/zsh/aliases.zsh"
-source "$DOTFILES_DIR/zsh/git.zsh"
+source "$ZSH_DIR/aliases.zsh"
+source "$ZSH_DIR/git.zsh"
 EOF
 
-echo "✅ Setup configuration complete!"
+echo "✅ Setup complete!"
+echo "📝 Run 'source ~/.zshrc' to load the configuration"
