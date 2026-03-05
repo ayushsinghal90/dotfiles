@@ -15,6 +15,9 @@ alias gc='git commit'
 alias gcm='git commit -m'
 alias gca='git commit --amend'
 
+alias gpf='git push --force'
+alias gp='git push origin'
+alias gu='git pull origin'
 
 alias gb='git branch'
 alias gba='git branch --all'
