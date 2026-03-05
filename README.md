@@ -24,8 +24,8 @@ Personal dotfiles for zsh configuration with useful aliases and git helpers.
 
 2. Run the setup script:
    ```bash
-   chmod +x zsh/setup.sh
-   ./zsh/setup.sh
+   chmod +x zsh_file/setup.sh
+   ./zsh_file/setup.sh
    ```
 
 3. Restart your terminal or source your configuration:
@@ -53,7 +53,7 @@ Use `gl` for logs from the last month or `pretty_git_log_long` for the last 12 m
 ```
 dotfiles/
 ├── README.md              # This file
-└── zsh/
+└── zsh_file/
     ├── aliases.zsh        # General and git aliases
     ├── git.zsh            # Git helper functions and formatting
     └── setup.sh           # Installation script
@@ -61,7 +61,7 @@ dotfiles/
 
 ## Customization
 
-Edit the files in the `zsh/` directory to customize your configuration:
+Edit the files in the `zsh_file/` directory to customize your configuration:
 - `aliases.zsh` - Add or modify command aliases
 - `git.zsh` - Customize git log formatting and helper functions
 
