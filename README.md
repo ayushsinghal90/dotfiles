@@ -46,8 +46,6 @@ This configuration includes custom git log formatting functions that display:
 - Commit message
 - Branch references (red)
 
-Use `gl` for logs from the last month or `pretty_git_log_long` for the last 12 months.
-
 ## File Structure
 
 ```
