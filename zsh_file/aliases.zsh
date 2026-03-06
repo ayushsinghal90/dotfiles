@@ -23,8 +23,10 @@ alias gb='git branch'
 alias gba='git branch --all'
 alias gbd='git branch -D'
 
-alias grdev='git checkout dev && git reset --hard origin/dev && git pull origin dev'
-alias grmas='git checkout master && git reset --hard origin/master && git pull origin master'
+alias grd='git reset --hard origin/dev && git pull origin dev'
+alias grm='git reset --hard origin/master && git pull origin master'
+alias gcrd='git checkout dev && grd'
+alias gcrm='git checkout master && grm'
 
 alias ga='git add -p'
 alias gaa='git add .'
